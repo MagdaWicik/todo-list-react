@@ -3,7 +3,7 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import { useState } from 'react';
+import { useState } from "react";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -37,12 +37,23 @@ function App() {
     })));
   };
 
+  const addNewTask = (content) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
+        content,
+        done: false,
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+      },
+    ]);
+  };
+
   return (
     <main>
       <Header title="Lista zadań" />
       <Section 
       title="Dodaj nowe zadanie" 
-      body={<Form />} 
+      body={<Form addNewTask={addNewTask} />} 
       />
 
       <Section
