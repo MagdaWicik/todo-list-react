@@ -1,8 +1,12 @@
 # Task List
 
-Description
+## Description
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+On this website you can create a task list. It is possible to mark a task as done and then delete it. There are also two buttons - with one of them you can hide completed tasks and with the other you can mark all tasks as completed
+
+![gif](public/todo-list.gif)
 
 ## Available Scripts
 
