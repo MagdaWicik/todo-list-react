@@ -1,5 +1,13 @@
 # Task List
 
+## Demo
+
+https://magdawicik.github.io/todo-list-react/
+
+## Used features 
+
+HTML, CSS, JavaScript (ES6+), React, BEM convention, Git
+
 ## Description
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
