@@ -1,6 +1,8 @@
+import { TitleHeader } from "./styled";
+
 const Header = ({ title }) => (
     <header>
-        <h1 className="header">{title}</h1>
+        <TitleHeader>{title}</TitleHeader>
       </header>
 );
 
