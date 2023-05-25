@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivButton = styled.div`
+export const StyledButtons = styled.div`
     display: flex;
     flex-wrap: wrap;
 `;
@@ -20,7 +20,7 @@ export const Button = styled.button`
 
         &:hover {
             color: rgb(0, 170, 170);
-    }
+        }
 
         &:disabled {
             color: #ccc;
