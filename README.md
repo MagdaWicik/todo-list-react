@@ -6,7 +6,7 @@ https://magdawicik.github.io/todo-list-react/
 
 ## Used features 
 
-HTML, CSS, JavaScript (ES6+), React, BEM convention, Git
+HTML, CSS, JavaScript (ES6+), React, Git, Styled Components, Redux
 
 ## Description
 
