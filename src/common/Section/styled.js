@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const SectionContainer = styled.section`
+    max-width: 800px;
+    margin: auto;
+`;
+
 export const Header = styled.header`
     background-color: rgb(255, 255, 255);
     margin-bottom: 2px;
@@ -20,4 +25,13 @@ export const Title = styled.h2`
     font-size: 20px;
     margin: 0;
     font-weight: 700;
+`;
+
+export const Body = styled.div`
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+
+    @media(max-width: 767px) {
+        flex-wrap: wrap;
+    }
 `;
