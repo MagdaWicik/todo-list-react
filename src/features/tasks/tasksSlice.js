@@ -23,7 +23,7 @@ const tasksSlice = createSlice({
             tasks.splice([index], 1);
         },
         setAllDone: state => {
-            state.tasks.forEach((task) => {task.done = !task.done});
+            state.tasks.forEach((task) => {task.done = true});
         },
         fetchExampleTasks: state => {
             state.loading = true;
