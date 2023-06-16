@@ -15,32 +15,34 @@ const Form = () => {
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        dispatch(addTask({
-            content: newTaskContent.trim(),
-            done: false,
-            id: nanoid(),
-        }));
+        if (newTaskContent.trim() !== "") {
+            dispatch(addTask({
+                content: newTaskContent.trim(),
+                done: false,
+                id: nanoid(),
+            }));
+        }
 
-        setNewTaskContent("");
-        focusInput();
+            setNewTaskContent("");
+            focusInput();
+        };
+
+        const focusInput = () => {
+            inputRef.current.focus();
+        };
+
+        return (
+            <FormWrapper onSubmit={onFormSubmit}>
+                <Input
+                    ref={inputRef}
+                    value={newTaskContent}
+                    placeholder="Co jest do zrobienia?"
+                    autoFocus
+                    onChange={({ target }) => setNewTaskContent(target.value)}
+                />
+                <Button>Dodaj zadanie</Button>
+            </FormWrapper>
+        )
     };
 
-    const focusInput = () => {
-        inputRef.current.focus();
-    };
-
-    return (
-        <FormWrapper onSubmit={onFormSubmit}>
-            <Input
-                ref={inputRef}
-                value={newTaskContent}
-                placeholder="Co jest do zrobienia?"
-                autoFocus
-                onChange={({ target }) => setNewTaskContent(target.value)}
-            />
-            <Button>Dodaj zadanie</Button>
-        </FormWrapper>
-    )
-};
-
-export default Form;
+    export default Form;
